@@ -1,0 +1,8 @@
+ar\edu\unlam\service\UserServiceImpl.class
+ar\edu\unlam\repositorio\RoleRepository.class
+ar\edu\unlam\Application.class
+ar\edu\unlam\entity\User.class
+ar\edu\unlam\entity\Role.class
+ar\edu\unlam\controller\UserController.class
+ar\edu\unlam\service\UserService.class
+ar\edu\unlam\repositorio\UserRepository.class

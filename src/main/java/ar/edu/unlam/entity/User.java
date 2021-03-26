@@ -21,7 +21,6 @@ public class User implements Serializable {
 
     @Column
     @NotBlank
-    @Size(min = 5, max = 8, message = "No se cumple las reglas del tamano")
     private String firstName;
     @Column
     @NotBlank
@@ -37,7 +36,6 @@ public class User implements Serializable {
     private String password;
 
     @Transient
-    @NotBlank
     private String confirmPassword;
 
     @Size(min = 1)
