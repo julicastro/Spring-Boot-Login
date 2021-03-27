@@ -1,5 +1,6 @@
 package ar.edu.unlam.service;
 
+import ar.edu.unlam.dto.ChangePasswordForm;
 import ar.edu.unlam.entity.User;
 import ar.edu.unlam.repositorio.UserRepository;
 import java.util.Optional;
@@ -76,4 +77,24 @@ public class UserServiceImpl implements UserService {
         repository.delete(user);
     }
 
+    @Override
+    public User changePassword(ChangePasswordForm form) throws Exception {
+        User user = getUserById(form.getId());
+
+        if (!user.getPassword().equals(form.getCurrentPassword())) {
+            throw new Exception("Current Password invalido.");
+        }
+
+        if (user.getPassword().equals(form.getNewPassword())) {
+            throw new Exception("Nuevo debe ser diferente al password actual.");
+        }
+
+        if (!form.getNewPassword().equals(form.getConfirmPassword())) {
+            throw new Exception("Nuevo Password y Current Password no coinciden.");
+        }
+
+        user.setPassword(form.getNewPassword());
+        return repository.save(user);
+    }
 }
+
