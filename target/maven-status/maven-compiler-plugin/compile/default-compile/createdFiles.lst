@@ -1,8 +1,15 @@
+ar\edu\unlam\WebSecurityConfig.class
 ar\edu\unlam\service\UserServiceImpl.class
-ar\edu\unlam\repositorio\RoleRepository.class
+ar\edu\unlam\service\UserDetailsServiceImpl.class
+ar\edu\unlam\dto\ChangePasswordForm.class
 ar\edu\unlam\Application.class
 ar\edu\unlam\entity\User.class
+ar\edu\unlam\repository\RoleRepository.class
+ar\edu\unlam\repository\UserRepository.class
+ar\edu\unlam\MethodSecurityConfig.class
 ar\edu\unlam\entity\Role.class
+com\cristianRuizBlog\aplicacion\util\Passgenerator.class
+ar\edu\unlam\Exception\CustomeFieldValidationException.class
 ar\edu\unlam\controller\UserController.class
 ar\edu\unlam\service\UserService.class
-ar\edu\unlam\repositorio\UserRepository.class
+ar\edu\unlam\Exception\UsernameOrIdNotFound.class

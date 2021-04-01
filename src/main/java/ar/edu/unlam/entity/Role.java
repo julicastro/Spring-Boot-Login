@@ -2,17 +2,25 @@ package ar.edu.unlam.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Role implements Serializable{
 
-	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6353963609310956029L;
+
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="native")
+	@GeneratedValue(strategy= GenerationType.AUTO, generator="native")
 	@GenericGenerator(name="native",strategy="native")
 	private Long id;
 	
@@ -22,13 +30,6 @@ public class Role implements Serializable{
 	@Column
 	private String description;
 
-	public Role() {
-		
-	}
-	public Role(Long id) {
-		this.id=id;
-	}
-	
 	public Long getId() {
 		return id;
 	}
@@ -52,12 +53,7 @@ public class Role implements Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	@Override
-	public String toString() {
-		return "Role [id=" + id + ", name=" + name + ", description=" + description + "]";
-	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -94,14 +90,11 @@ public class Role implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Role [id=" + id + ", name=" + name + ", description=" + description + "]";
+	}
 	
 	
 }
